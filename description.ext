@@ -1,0 +1,76 @@
+/*
+	Author: MrThomasM
+	MrThomasM#1857
+
+	Description:
+	- A team deathmatch gamemode.
+*/
+
+
+onLoadName = "MrThomasM's team deathmatch"; 
+dev = "MrThomasM#1857";
+author = "MrThomasM#1857";
+
+
+// Settings
+disabledAI = 1;
+enableDebugConsole = 1;
+ReviveRequiredItemsFakConsumed = 1;
+
+class CfgFunctions
+{
+	class MRTM
+	{
+		class Client
+		{
+			file = "Resources\client";
+			class initClient {};
+			class arsenalHandle {};
+			class spawnAtObjective {};
+			class timerClient {};
+			class respawnHandle {};
+			class setupUI {};
+		};
+		class Server
+		{
+			file = "Resources\server";
+			class initServer {};
+			class setupArea {};
+			class timer {};
+		};
+	};
+};
+
+class Header
+{
+	gameType = TDM;
+	minPlayers = 1;
+	maxPlayers = 60;
+};
+
+class Params
+{
+	class MRTM_TDM_killAmount
+	{
+		title = "Maximum kills";
+		values[] = {1, 5, 10, 15, 20, 25, 50, 100, 150, 200, 250, 300};
+		texts[] = { "1 Kill", "5 Kills", "10 Kills", "15 Kills",  "20 Kills", "25 Kills", "50 Kills", "100 Kills", "150 Kills", "200 Kills", "250 Kills", "300 Kills"};
+		default = 50;
+	};
+	
+	class MRTM_TDM_prepTime
+	{
+		title = "Preparation time";
+		values[] = { 60, 120, 180, 240, 300};
+		texts[] = { "1 Minute", "2 Minutes", "3 Minutes", "4 Minutes", "5 Minutes"};
+		default = 240;
+	};
+
+	class MRTM_TDM_roundTime
+	{
+		title = "Objective time";
+		values[] = { 300, 600, 900, 1200, 1500, 1800, 2100, 2400, 2700, 3000, 3300, 3600};
+		texts[] = { "5 Minutes", "10 Minutes", "15 Minutes", "20 Minutes", "25 Minutes", "30 Minutes", "35 Minutes", "40 Minutes", "45 Minutes", "50 Minutes", "55 Minutes", "60 Minutes"};
+		default = 1800;
+	};
+};
