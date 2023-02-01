@@ -5,4 +5,4 @@ This is a team deathmatch game mode for the Arma 3 game.
 You can contact me trough my discord: MrThomasM#1857
 
 ## License info
-Coming soon!
+This project makes use of the MIT License.
