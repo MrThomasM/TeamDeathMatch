@@ -23,4 +23,4 @@ while {_prepTime >= 0} do {
 	sleep 1;
 };
 
-[] spawn MRTM_fnc_setupArea;
+[] spawn MRTM_fnc_setupMission;

@@ -27,19 +27,20 @@ class CfgFunctions
 		class Client
 		{
 			file = "Resources\client";
-			class initClient {};
 			class arsenalHandle {};
-			class spawnAtObjective {};
+			class arsenalSetup {};
+			class initClient {};
 			class respawnHandle {};
 			class setupUI {};
-			class arsenalSetup {};
+			class spawnAtObjective {};
 			class timerClient {};
 		};
 		class Server
 		{
 			file = "Resources\server";
 			class initServer {};
-			class setupArea {};
+			class missionStart {};
+			class setupMission {};
 			class timerServer {};
 		};
 	};

@@ -6,7 +6,7 @@
 	- Initialize the objective scenario.
 
 	Exucution:
-		[] spawn MRTM_fnc_setupArea;
+		[] spawn MRTM_fnc_setupMission;
 
 	Parameter(s): nothing
 
@@ -449,6 +449,12 @@ switch (battleCityName) do {
 	};
 };
 
+missionNamespace setVariable ["activeBattlehappening", true , true];
+
+missionNamespace setVariable ["currentBattlePos", battlePos, true];
+missionNamespace setVariable ["currentWestSpawn", spawnWestPos, true];
+missionNamespace setVariable ["currentEastSpawn", spawnEastPos, true];
+
 [] spawn { //Game end handle
 	missionNamespace setVariable ["objTime", 0, true];
 	["battle", missionNamespace getVariable "timeObjectiveParam"] spawn MRTM_fnc_timerClient;
@@ -495,12 +501,8 @@ switch (battleCityName) do {
 	[missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timer", 2]; // server
 };
 
-missionNamespace setVariable ["activeBattlehappening", true , true];
+//[battlePos, spawnWestPos, spawnEastPos] remoteExec ["MRTM_fnc_spawnAtObjective", 0]; //every client, not server
 
-missionNamespace setVariable ["currentBattlePos", battlePos, true];
-missionNamespace setVariable ["currentWestSpawn", spawnWestPos, true];
-missionNamespace setVariable ["currentEastSpawn", spawnEastPos, true];
-
-[battlePos, spawnWestPos, spawnEastPos] remoteExec ["MRTM_fnc_spawnAtObjective", 0]; //every client, not server
+[] spawn MRTM_fnc_missionStart;
 
 [] remoteExec ["MRTM_fnc_setupUI", 0]; //every client, not server
