@@ -6,6 +6,9 @@
 	- A team deathmatch gamemode.
 */
 
+#include "ui\defines.hpp"
+#include "ui\controls.hpp"
+
 
 onLoadName = "MrThomasM's team deathmatch"; 
 dev = "MrThomasM#1857";
@@ -27,9 +30,10 @@ class CfgFunctions
 			class initClient {};
 			class arsenalHandle {};
 			class spawnAtObjective {};
-			class timerClient {};
 			class respawnHandle {};
 			class setupUI {};
+			class arsenalSetup {};
+			class timerMission {};
 		};
 		class Server
 		{

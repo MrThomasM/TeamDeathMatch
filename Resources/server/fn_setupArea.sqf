@@ -450,25 +450,8 @@ switch (battleCityName) do {
 };
 
 [] spawn { //Game end handle
-
 	missionNamespace setVariable ["objTime", 0, true];
-
-	[] spawn {
-		while {missionNamespace getVariable "activeBattlehappening"} do {
-			//Objective timer display
-			_objTime = missionNamespace getVariable "timeObjectiveParam";
-			for "_i" from 0 to _objTime do {
-				if (missionNamespace getVariable "activeBattlehappening") then {
-					[format ["Time left: %1", [ (_objTime - _i), "MM:SS"] call BIS_fnc_secondsToString]] remoteExec ["hintSilent", -2]; //every client, not server
-					missionNamespace setVariable ["objTime", _i, true];
-					sleep 1;
-				} else {
-					break;
-				};
-			};	
-		};
-		"" remoteExec ["hintSilent", -2]; //every client, not server
-	};
+	["battle", missionNamespace getVariable "timeObjectiveParam"] spawn MRTM_fnc_timerMission;
 	
 	waitUntil {missionNamespace getVariable "bluKills" == missionNamespace getVariable "killParam" || missionNamespace getVariable "opfKills" == missionNamespace getVariable "killParam" || missionNamespace getVariable "objTime" == missionNamespace getVariable "timeObjectiveParam"};
 
@@ -507,7 +490,7 @@ switch (battleCityName) do {
 
 	missionNamespace setVariable ["prepTime", missionNamespace getVariable "timeParam", true]; //The prep timer
 
-	[missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timerClient", -2]; //every client, not server
+	["prepping", missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timerMission", 0]; //every client, not server
 
 	[missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timer", 2]; // server
 };
@@ -518,6 +501,6 @@ missionNamespace setVariable ["currentBattlePos", battlePos, true];
 missionNamespace setVariable ["currentWestSpawn", spawnWestPos, true];
 missionNamespace setVariable ["currentEastSpawn", spawnEastPos, true];
 
-[battlePos, spawnWestPos, spawnEastPos] remoteExec ["MRTM_fnc_spawnAtObjective", -2]; //every client, not server
+[battlePos, spawnWestPos, spawnEastPos] remoteExec ["MRTM_fnc_spawnAtObjective", 0]; //every client, not server
 
-[] remoteExec ["MRTM_fnc_setupUI", -2]; //every client, not server
+[] remoteExec ["MRTM_fnc_setupUI", 0]; //every client, not server

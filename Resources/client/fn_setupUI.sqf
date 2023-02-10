@@ -1,3 +1,20 @@
+/*
+	Author: MrThomasM
+	MrThomasM#1857
+
+	Description:
+	- Displays a kill feed UI.
+
+	Exucution:
+		[] spawn MRTM_fnc_setupUI;
+
+	Parameter(s): nothing
+
+	Returns: nothing
+
+	Result: 
+	Shows both teams kills and max amount of kills.
+*/
 
 _xDef = safezoneX;
 _yDef = safezoneY;

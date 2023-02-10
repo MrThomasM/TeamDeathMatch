@@ -1,7 +1,21 @@
 if (side player == west) then {
 	_arsBID = player addAction ["Open arsenal",
 	{
+		_uniform = uniform player;
 		["Open", TRUE] spawn BIS_fnc_arsenal;
+		_uniform spawn {
+			waitUntil {!isNull (uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull])};
+			while {!isNull (uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull])} do {
+				if !(uniform player in clothingListNato) then {
+					player forceAddUniform "U_B_CombatUniform_mcam";
+				};
+
+				if !(headGear player in helmetListNato) then {
+					player addHeadgear "H_HelmetB";
+				};
+				sleep 0.1;
+			};
+		};
 	},
 	nil,		
 	1.5,		
@@ -15,7 +29,17 @@ if (side player == west) then {
 } else {
 	_arsOID = player addAction ["Open arsenal",
 	{
+		_uniform = uniform player;
 		["Open", TRUE] spawn BIS_fnc_arsenal;
+		_uniform spawn {
+			waitUntil {!isNull (uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull])};
+			while {!isNull (uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull])} do {
+				if !(uniform player in MRTM_factionAppropriateUniforms) then {
+					player forceAddUniform _this;
+				};
+				sleep 0.1;
+			};
+		};
 	},
 	nil,		
 	1.5,		
