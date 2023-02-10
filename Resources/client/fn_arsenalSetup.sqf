@@ -1,3 +1,21 @@
+/*
+	Author: MrThomasM
+	MrThomasM#1857
+
+	Description:
+	- Allows for a pre set arsenal for players to open.
+
+	Exucution:
+		[] call MRTM_fnc_arsenalHandle;
+
+	Parameter(s): nothing
+
+	Returns: nothing
+
+	Result: 
+	Removes / adds certain clothing from the arsenal.
+*/
+
 ["Preload"] call BIS_fnc_arsenal;
 
 helmetListNato = [

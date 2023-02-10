@@ -6,7 +6,7 @@
 	- Script that only excecutes when a player joins (Client side).
 */
 
-call MRTM_fnc_arsenalSetup;
+[] call MRTM_fnc_arsenalSetup;
 
 player addEventHandler ["HandleDamage", {
 	params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];

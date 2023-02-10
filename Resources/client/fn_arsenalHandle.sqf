@@ -1,3 +1,21 @@
+/*
+	Author: MrThomasM
+	MrThomasM#1857
+
+	Description:
+	- Allows people to open the arsenal.
+
+	Exucution:
+		[] spawn MRTM_fnc_arsenalHandle;
+
+	Parameter(s): nothing
+
+	Returns: nothing
+
+	Result: 
+	Opens the arsenal.
+*/
+
 if (side player == west) then {
 	_arsBID = player addAction ["Open arsenal",
 	{
