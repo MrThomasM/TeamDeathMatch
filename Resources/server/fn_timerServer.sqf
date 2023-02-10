@@ -6,7 +6,7 @@
 	- Make a timer countdown on server end.
 
 	Exucution:
-		[_timeInSeconds] spawn MRTM_fnc_timer;
+		[_timeInSeconds] spawn MRTM_fnc_timerServer;
 
 	Parameter(s): ["_prepTime"]
 

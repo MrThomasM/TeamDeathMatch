@@ -6,14 +6,14 @@
 	- Displays a timer.
 
 	Exucution:
-		[] spawn MRTM_fnc_timer;
+		[] spawn MRTM_fnc_timerClient;
 
 	Parameter(s): ["_time"]
 
 	Returns: nothing
 
 	Result: 
-	Shows a timer.
+	Shows a timer on the client's device.
 */
 
 params ["_state", "_time"];

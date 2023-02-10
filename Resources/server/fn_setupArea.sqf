@@ -451,7 +451,7 @@ switch (battleCityName) do {
 
 [] spawn { //Game end handle
 	missionNamespace setVariable ["objTime", 0, true];
-	["battle", missionNamespace getVariable "timeObjectiveParam"] spawn MRTM_fnc_timerMission;
+	["battle", missionNamespace getVariable "timeObjectiveParam"] spawn MRTM_fnc_timerClient;
 	
 	waitUntil {missionNamespace getVariable "bluKills" == missionNamespace getVariable "killParam" || missionNamespace getVariable "opfKills" == missionNamespace getVariable "killParam" || missionNamespace getVariable "objTime" == missionNamespace getVariable "timeObjectiveParam"};
 
@@ -490,7 +490,7 @@ switch (battleCityName) do {
 
 	missionNamespace setVariable ["prepTime", missionNamespace getVariable "timeParam", true]; //The prep timer
 
-	["prepping", missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timerMission", 0]; //every client, not server
+	["prepping", missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timerClient", 0]; //every client, not server
 
 	[missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timer", 2]; // server
 };

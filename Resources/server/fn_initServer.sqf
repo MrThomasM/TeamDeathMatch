@@ -22,7 +22,7 @@ missionNamespace setVariable ["activeBattlehappening", false , true];
 
 missionNamespace setVariable ["prepTime", missionNamespace getVariable "timeParam", true]; //The prep timer
 
-[missionNamespace getVariable "prepTime"] spawn MRTM_fnc_timer;
+[missionNamespace getVariable "prepTime"] spawn MRTM_fnc_timerServer;
 
 
 [] spawn {

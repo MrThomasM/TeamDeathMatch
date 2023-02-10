@@ -37,7 +37,7 @@ if (missionNamespace getVariable "activeBattlehappening") then {
 	sleep 2;
 	[] spawn MRTM_fnc_setupUI;
 } else {
-	["prepping", missionNamespace getVariable "prepTime"] spawn MRTM_fnc_timerMission;
+	["prepping", missionNamespace getVariable "prepTime"] spawn MRTM_fnc_timerClient;
 };
 
 
