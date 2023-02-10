@@ -40,7 +40,7 @@ class CfgFunctions
 			file = "Resources\server";
 			class initServer {};
 			class setupArea {};
-			class timer {};
+			class timerServer {};
 		};
 	};
 };
