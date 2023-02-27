@@ -501,8 +501,6 @@ missionNamespace setVariable ["currentEastSpawn", spawnEastPos, true];
 	[missionNamespace getVariable "prepTime"] remoteExec ["MRTM_fnc_timer", 2]; // server
 };
 
-//[battlePos, spawnWestPos, spawnEastPos] remoteExec ["MRTM_fnc_spawnAtObjective", 0]; //every client, not server
-
-[ spawnWestPos, spawnEastPos] spawn MRTM_fnc_missionStart;
+[battlePos, spawnWestPos, spawnEastPos] remoteExec ["MRTM_fnc_spawnAtObjective", 0]; //every client, not server
 
 [] remoteExec ["MRTM_fnc_setupUI", 0]; //every client, not server

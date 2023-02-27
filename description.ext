@@ -39,7 +39,6 @@ class CfgFunctions
 		{
 			file = "Resources\server";
 			class initServer {};
-			class missionStart {};
 			class setupMission {};
 			class timerServer {};
 		};
