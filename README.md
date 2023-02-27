@@ -1,5 +1,5 @@
 # TeamDeathMatch.altis
-This is a team deathmatch game mode for the Arma 3 game.
+This is a team deathmatch game mode for the Arma 3 game. The project is still work in progress. i have made the base frame so far. The game can be ran in its current version.
 
 Work in progres.
 
