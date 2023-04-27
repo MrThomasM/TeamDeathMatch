@@ -8,8 +8,9 @@
 
 [] call MRTM_fnc_arsenalSetup;
 
-call MRTM_fnc_mapIcons; 
+call MRTM_fnc_mapIcons;
 
+//Event handlers:
 player addEventHandler ["HandleDamage", {
 	params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
 	_bluBase = missionNamespace getVariable "bluBaseSpawn";
@@ -20,7 +21,9 @@ player addEventHandler ["HandleDamage", {
 	};
 }];
 
-[] spawn {
+//End of event handlers
+
+0 spawn {
 	while {true} do {
 		if (missionNamespace getVariable "activeBattlehappening") then {
 			_objective = missionNamespace getVariable "currentBattlePos";
