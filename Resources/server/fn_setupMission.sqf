@@ -59,6 +59,11 @@ _locationArray = createHashMapFromArray [
 
 rSelection = floor random ((count _locationArray) + 1); //Need to make it so its never 0
 
+while {rSelection == 0} do {
+	rSelection = floor random ((count _locationArray) + 1);
+	sleep 0.1;
+};
+
 _battleLocation = _locationArray get rSelection;
 
 battleCityName = _battleLocation select 0;

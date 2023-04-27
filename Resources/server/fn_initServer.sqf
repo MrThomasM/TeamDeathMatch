@@ -30,7 +30,6 @@ missionNamespace setVariable ["prepTime", missionNamespace getVariable "timePara
 		{
 			deleteVehicle _x;
 		} forEach allDeadMen;
-		
 		sleep 1;
 	};
 };
