@@ -1,5 +1,3 @@
-waitUntil {!isNil "BIS_WL_playerSide"};
-
 westColor = [0,0.3,0.6,1];
 eastColor = [0.5,0,0,1];
 aafColor = [0,0.5,0,1];
@@ -30,9 +28,9 @@ MRTM_fnc_iconType = {
 
 MRTM_fnc_iconSize = {
 	params ["_e"];
-	if (_e isKindOf 'Man') exitWith {22};
-	if (_e isKindOf 'StaticWeapon') exitWith {22};
-	if (_e isKindOf 'LandVehicle') exitWith {26};
+	if (_e isKindOf 'Man') exitWith {24};
+	if (_e isKindOf 'StaticWeapon') exitWith {24};
+	if (_e isKindOf 'LandVehicle') exitWith {28};
 	if (_e isKindOf 'Ship') exitWith {24};
 	if (_e isKindOf 'Air') exitWith {24};
 	22;

@@ -8,6 +8,8 @@
 
 [] call MRTM_fnc_arsenalSetup;
 
+call MRTM_fnc_mapIcons; 
+
 player addEventHandler ["HandleDamage", {
 	params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
 	_bluBase = missionNamespace getVariable "bluBaseSpawn";

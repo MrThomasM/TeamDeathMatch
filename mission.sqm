@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=350;
+		nextID=357;
 	};
 	class Camera
 	{
 		pos[]={21243.49,396.03253,10251.097};
-		dir[]={-0.097335093,-0.76088279,0.64154768};
-		up[]={-0.1141344,0.6488893,0.75227398};
-		aside[]={0.98868573,0,0.1500026};
+		dir[]={0.11431362,-0.74571204,0.65638858};
+		up[]={0.12794399,0.66626835,0.73465413};
+		aside[]={0.98517132,-7.4505806e-009,-0.17157292};
 	};
 };
 binarizationWanted=0;
@@ -155,7 +155,6 @@ class ScenarioData
 	author="MrThomasM";
 	overviewText="The bar's deathmatch.";
 	disabledAI=1;
-	respawn=3;
 	respawnDelay=3;
 	class Header
 	{
@@ -204,18 +203,6 @@ class CustomAttributes
 				class data
 				{
 					singleType="ARRAY";
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								singleType="STRING";
-								value="Counter";
-							};
-						};
-					};
 				};
 			};
 		};
@@ -4125,7 +4112,7 @@ class Mission
 		class Item36
 		{
 			dataType="Marker";
-			position[]={21316.477,2.573,10724.822};
+			position[]={21315.094,2.5599999,10725.402};
 			name="respawn_east";
 			markerType="ELLIPSE";
 			type="";
@@ -4134,7 +4121,7 @@ class Mission
 			a=7;
 			b=7;
 			id=445;
-			atlOffset=-0.0002348423;
+			atlOffset=0.0004491806;
 		};
 		class Item37
 		{
