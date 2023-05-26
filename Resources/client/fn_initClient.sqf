@@ -32,7 +32,7 @@ player addEventHandler ["HandleDamage", {
 				player setDamage 1;
 			};
 		};
-		sleep 4;
+		sleep 1;
 	};
 };
 
